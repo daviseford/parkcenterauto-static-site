@@ -2,7 +2,7 @@
 
 // Semantic color scheme
 $theme-colors: (
-  primary: #007bff,
+  primary: #ff8b23,
   secondary: #004EA3,
   success: #28a745,
   info: #00fbff,
@@ -53,7 +53,7 @@ $display4-size: 3.5 * $font-size-base;
 $border-radius: .25rem;
 
 
-@import 'bootstrap-4.0.0-beta.1';
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js';
 
 
 body > * {
