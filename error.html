@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Location | Park Center Automotive | Mechanic in Manassas Park, VA</title>
+    <title>Error | Park Center Automotive | Mechanic in Manassas Park, VA</title>
     <meta name="keywords" content="mechanic, manassas, manassas park, oye, custom, oil change,
 	auto repair, ase, certified, service, diagnostic, diagnose, car, truck, suv, kit, transmission, engine, car repair, Antique engines, farm equipment, Automotive Accessories, Alignment, Automated Engine Analysis, Balancing, Batteries, Brakes, Collision repair, Cooling Systems, Radiators, Engines, Engine repair, overhaul, Electrical, Emission Systems, Exhaust, Four Wheel Drive, Fuel Injection, Go-Fast Gear, Heating and Air Conditioning, Ignition Systems, Lubrication, Oil, Filter, Steering, Suspension & Shocks, Timing Belts, Tires, Transmissions, Tune-ups, Wheels, Winterizing, dart, hemi, barracuda"/>
     <meta name="description" content="Park Center Automotive"/>
@@ -23,48 +23,62 @@
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
                 <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                <li class="nav-item active"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
             </ul>
             <!-- Contact Button -->
-            <a class="ml-3 btn navbar-btn btn-primary" href="#">Contact Us</a>
+            <a class="ml-3 btn navbar-btn btn-primary" href="location.html">Contact Us</a>
         </div>
     </div>
 </nav>
 
-
 <div class="py-5">
     <div class="container">
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-5">
-                        <h2 class="mb-4">We're here for you</h2>
-                        <ul>
-                            <li>We are conveniently located next to the Manassas Park City Hall and VRE.</li>
-                            <li>Our hours of operation are 8 A.M. to 6 P.M. We accept overnight dropoffs as well.</li>
-                            <li>8453 Park Center Ct.<br/>
-                                Manassas Park, VA, 20111
-                            </li>
-                            <li>Phone: <span>(703) 335 - 1058</span></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-7">
-                        <iframe width="100%"
-                                height="50%"
-                                frameborder="0"
-                                scrolling="no"
-                                marginheight="0"
-                                marginwidth="0"
-                                src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Park+Center+Automotive,+Park+Center+Court,+Manassas+Park,+VA&amp;aq=0&amp;oq=park+center+au&amp;sll=38.769384,-104.737805&amp;sspn=0.003618,0.008256&amp;ie=UTF8&amp;hq=Park+Center+Automotive,&amp;hnear=Park+Center+Ct,+Manassas+Park,+Virginia+20111&amp;t=m&amp;cid=14855954423257874148&amp;ll=38.769192,-77.442348&amp;spn=0.00803,0.013733&amp;z=16&amp;iwloc=A&amp;output=embed"
-                        ></iframe>
-                        <br/>
-                    </div>
-
-                </div>
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <h1>404: Page not found</h1>
+                <p>Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
+                    <a href="index.html">Head back home</a> to try finding it again.
+                </p>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+
+            <div class="col-md-4" id="giphyme">
+
+                <script type="text/javascript">
+                  document.addEventListener('DOMContentLoaded', function () {
+                    const q = 'error'; // search query
+                    const api_key = 'dc6zaTOxFJmzC';    // your giphy API key
+                    let request = new XMLHttpRequest;
+                    request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=' + api_key + '&tag=' + q, true);
+                    request.onload = function () {
+                      if (request.status >= 200 && request.status < 400) {
+                        const data = JSON.parse(request.responseText).data.image_url;
+                        console.log(data);
+                        document.getElementById("giphyme").innerHTML = '<center>' +
+                            '<img src = "' + data + '"  title="GIF via Giphy" class="img-fluid d-block w-100 mb-3">' +
+                            '</center>';
+                      } else {
+                        console.log('reached giphy, but API returned an error');
+                      }
+                    };
+                    request.onerror = function () {
+                      console.log('connection error');
+                    };
+                    request.send();
+                  });
+                </script>
+
+            </div>
+
         </div>
     </div>
 </div>
+</div>
+
 
 <div class="bg-light text-dark">
     <div class="container">
