@@ -5587,3 +5587,13 @@ body > * {
     top: 0px;
     pointer-events: none;
     background: linear-gradient(to top, #343a40 0%, transparent 100%); }
+
+.pca_splash_banner {
+    background-image: url('http://parkcenterautomotive.com.s3-website-us-east-1.amazonaws.com/images/misc/lemans_banner1.JPG');
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+}
