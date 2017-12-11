@@ -47,31 +47,6 @@
             </div>
 
             <div class="col-md-4" id="giphyme">
-
-                <script type="text/javascript">
-                  document.addEventListener('DOMContentLoaded', function () {
-                    const q = 'error'; // search query
-                    const api_key = 'dc6zaTOxFJmzC';    // your giphy API key
-                    let request = new XMLHttpRequest;
-                    request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=' + api_key + '&tag=' + q, true);
-                    request.onload = function () {
-                      if (request.status >= 200 && request.status < 400) {
-                        const data = JSON.parse(request.responseText).data.image_url;
-                        console.log(data);
-                        document.getElementById("giphyme").innerHTML = '<center>' +
-                            '<img src = "' + data + '"  title="GIF via Giphy" class="img-fluid d-block w-100 mb-3">' +
-                            '</center>';
-                      } else {
-                        console.log('reached giphy, but API returned an error');
-                      }
-                    };
-                    request.onerror = function () {
-                      console.log('connection error');
-                    };
-                    request.send();
-                  });
-                </script>
-
             </div>
 
         </div>
@@ -121,6 +96,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
+
+<!-- Page Specific JS -->
+<script async src="js/giphy.js"></script>
 
 
 </body>
