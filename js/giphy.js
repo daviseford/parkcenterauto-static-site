@@ -1,6 +1,6 @@
 $(document).ready(function () {
-
-  const q = 'error'; // search query
+  const q = ['fail', 'dumb', 'silly',
+    'funny', 'hilarious', 'error', 'lol'][new Date().getDay()]; // semi-random search query
   const api_key = 'dc6zaTOxFJmzC';    // your giphy API key
   let request = new XMLHttpRequest;
   request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=' + api_key + '&tag=' + q, true);
